@@ -1,0 +1,33 @@
+allprojects {
+	apply plugin: 'java'
+	sourceCompatibility = 1.8
+	group = 'com.ourgame.gpie'
+	version = '1.0'
+	// systemProp.file.encoding = 'UTF-8'
+}
+
+subprojects {
+	apply plugin: 'eclipse'
+	repositories {
+	  mavenCentral()
+	}
+
+	dependencies {
+		compile 'org.slf4j:slf4j-api:1.7.6'
+		compile 'ch.qos.logback:logback-core:1.1.2'
+		compile 'ch.qos.logback:logback-classic:1.1.2'	
+	    testCompile 'junit:junit:4.11'
+	}
+}
+
+project(':core') {
+	dependencies {
+		compile 'org.apache.mina:mina-core:2.0.7'
+	}
+}
+
+project(':game') {
+	dependencies {
+		compile project(':core')
+	}
+}
