@@ -2,19 +2,13 @@ package com.ourgame.gpie.servicemodel;
 
 import org.apache.mina.core.buffer.IoBuffer;
 
-/**
- * 代表客户端与服务端通信的消息数据。
- * 
- * @author qius
- *
- */
 public class Message {
 
 	public final static int HEADER_LENGTH = 12;
 
 	private MessageType type;
-//	private int service;
-//	private int method;
+	// private int service;
+	// private int method;
 
 	private int id;
 	private byte[] body;
@@ -47,28 +41,13 @@ public class Message {
 		return this.body == null ? 0 : this.body.length;
 	}
 
-	/**
-	 * @return 获取消息的总长度。
-	 */
 	public int getTotalLength() {
 		return HEADER_LENGTH + this.getBodyLength();
 	}
 
-	/**
-	 * 从 {@link IoBuffer} 中读取消息。
-	 * 
-	 * @param buffer
-	 *            存放消息数据的 {@link IoBuffer}。
-	 */
 	public void read(IoBuffer buffer) {
 	}
 
-	/**
-	 * 将消息的数据写入到{@link IoBuffer}中。
-	 * 
-	 * @param buffer
-	 *            待写入数据的 {@link IoBuffer}。
-	 */
 	public void write(IoBuffer buffer) {
 	}
 
