@@ -17,8 +17,10 @@ public abstract class ClientBase {
 	}
 
 	public void open() {
+		throw new NotImplementedException();
 	}
 
 	public void close() {
+		throw new NotImplementedException();
 	}
 }

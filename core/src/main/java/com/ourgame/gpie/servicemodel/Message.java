@@ -2,6 +2,8 @@ package com.ourgame.gpie.servicemodel;
 
 import org.apache.mina.core.buffer.IoBuffer;
 
+import com.ourgame.gpie.NotImplementedException;
+
 public class Message {
 
 	public final static int HEADER_LENGTH = 12;
@@ -46,9 +48,11 @@ public class Message {
 	}
 
 	public void read(IoBuffer buffer) {
+		throw new NotImplementedException();
 	}
 
 	public void write(IoBuffer buffer) {
+		throw new NotImplementedException();
 	}
 
 	public IoBuffer toBuffer() {
