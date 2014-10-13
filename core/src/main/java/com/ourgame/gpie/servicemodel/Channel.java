@@ -1,10 +1,26 @@
 package com.ourgame.gpie.servicemodel;
 
+import java.net.InetAddress;
+
 import com.ourgame.gpie.NotImplementedException;
 
 public class Channel extends ServiceObject {
 
-	public Channel() {
+	private SessionState session;
+
+	public Channel(ChannelFactory factory) {
+	}
+
+	public InetAddress getLocalAddress() {
+		throw new NotImplementedException();
+	}
+
+	public InetAddress getRemoteAddress() {
+		throw new NotImplementedException();
+	}
+
+	public SessionState getSession() {
+		return this.session;
 	}
 
 	public void send(Message message) {
@@ -12,7 +28,7 @@ public class Channel extends ServiceObject {
 	}
 
 	public void send(Message message, long timeout) {
-		throw new NotImplementedException();	
+		throw new NotImplementedException();
 	}
 
 	public ServiceFuture sendAsync(Message message) {

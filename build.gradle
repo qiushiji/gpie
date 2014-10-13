@@ -31,3 +31,9 @@ project(':game') {
 		compile project(':core')
 	}
 }
+
+project(':game') {
+	dependencies {
+		compile project(':core')
+	}
+}

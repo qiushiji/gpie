@@ -73,16 +73,16 @@ public abstract class ServiceObject {
 		this.onFaulted();
 	}
 
-//	void fault(Exception exception) {
-//		try {
-//			this.thisLock.lock();
-//
-//		} finally {
-//			this.thisLock.unlock();
-//		}
-//
-//		this.fault();
-//	}
+	// void fault(Exception exception) {
+	// try {
+	// this.thisLock.lock();
+	//
+	// } finally {
+	// this.thisLock.unlock();
+	// }
+	//
+	// this.fault();
+	// }
 
 	public void close() {
 		this.close(this.getDefaultCloseTimeout());
