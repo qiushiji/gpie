@@ -8,9 +8,6 @@ public class Channel extends ServiceObject {
 
 	private SessionState session;
 
-	public Channel(ChannelFactory factory) {
-	}
-
 	public InetAddress getLocalAddress() {
 		throw new NotImplementedException();
 	}
