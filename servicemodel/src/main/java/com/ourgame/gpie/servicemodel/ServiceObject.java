@@ -155,7 +155,9 @@ public abstract class ServiceObject {
 
 		if (this.state == ServiceObjectState.Closing || this.state == ServiceObjectState.Closed) {
 			return;
-		} else if (this.state == ServiceObjectState.Created || this.state == ServiceObjectState.Opening
+		}
+
+		if (this.state == ServiceObjectState.Created || this.state == ServiceObjectState.Opening
 				|| this.state == ServiceObjectState.Faulted) {
 			this.abort();
 		} else if (this.state == ServiceObjectState.Opened) {
