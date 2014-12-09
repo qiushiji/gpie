@@ -7,7 +7,7 @@ public class HelloWorld {
 	public static void main(String[] args) throws Exception {
 
 		long start = System.currentTimeMillis();
-		URI uri = new URI("tcp://qiushi:hello@localhost:8888");
+		URI uri = new URI("tcp://localhost:8888/auth");
 
 		Method[] methods = uri.getClass().getMethods();
 		for (int i = 0; i < methods.length; ++i) {

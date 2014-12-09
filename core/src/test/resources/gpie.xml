@@ -1,13 +1,5 @@
-<serviceModel>
-	<hosts>
-		<host name="gameserver">
-			<address>tcp://localhost:8888</address>
-			<services>
-				<service name="com.ourgame.gameserver.MainService"/>
-				<service name="com.ourgame.gameserver.GameService"/>
-				<service name="com.ourgame.gameserver.AuthService"/>
-				<service name="com.ourgame.gameserver.OtherService"/>
-			</services>
-		</host>
-	</hosts>
-</serviceModel>
+<gpie>
+	<serviceModel>
+		
+	</serviceModel>
+</gpie>

@@ -37,3 +37,9 @@ project(':game') {
 		compile project(':core')
 	}
 }
+
+project(':serviceModel') {
+	dependencies {
+		compile project(':core')
+	}
+}

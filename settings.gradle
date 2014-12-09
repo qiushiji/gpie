@@ -1,1 +1,1 @@
-include 'core', 'game', 'sample'
+include 'core', 'game', 'sample', 'serviceModel'
